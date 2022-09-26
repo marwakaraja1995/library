@@ -1,0 +1,68 @@
+info: 9/26/2022 15:42:15.849 RelationalEventId.CommandExecuted[20101] (Microsoft.EntityFrameworkCore.Database.Command) 
+      Executed DbCommand (87ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+      SELECT 1
+info: 9/26/2022 15:42:24.018 RelationalEventId.CommandExecuted[20101] (Microsoft.EntityFrameworkCore.Database.Command) 
+      Executed DbCommand (6,534ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+      
+      IF EXISTS
+          (SELECT *
+           FROM [sys].[objects] o
+           WHERE [o].[type] = 'U'
+           AND [o].[is_ms_shipped] = 0
+           AND NOT EXISTS (SELECT *
+               FROM [sys].[extended_properties] AS [ep]
+               WHERE [ep].[major_id] = [o].[object_id]
+                   AND [ep].[minor_id] = 0
+                   AND [ep].[class] = 1
+                   AND [ep].[name] = N'microsoft_database_tools_support'
+          )
+      )
+      SELECT 1 ELSE SELECT 0
+info: 9/26/2022 15:42:28.343 RelationalEventId.CommandExecuted[20101] (Microsoft.EntityFrameworkCore.Database.Command) 
+      Executed DbCommand (816ms) [Parameters=[@p0='11111' (Nullable = false) (Size = 4000), @p1='ahmad' (Nullable = false) (Size = 4000), @p2='22222' (Nullable = false) (Size = 4000), @p3='mohammad' (Nullable = false) (Size = 4000), @p4='33333' (Nullable = false) (Size = 4000), @p5='samer' (Nullable = false) (Size = 4000), @p6='44444' (Nullable = false) (Size = 4000), @p7='salem' (Nullable = false) (Size = 4000), @p8='55555' (Nullable = false) (Size = 4000), @p9='karam' (Nullable = false) (Size = 4000), @p10='66666' (Nullable = false) (Size = 4000), @p11='reem' (Nullable = false) (Size = 4000), @p12='77777' (Nullable = false) (Size = 4000), @p13='noor' (Nullable = false) (Size = 4000), @p14='88888' (Nullable = false) (Size = 4000), @p15='sara' (Nullable = false) (Size = 4000), @p16='99999' (Nullable = false) (Size = 4000), @p17='hiba' (Nullable = false) (Size = 4000)], CommandType='Text', CommandTimeout='30']
+      SET NOCOUNT ON;
+      DECLARE @inserted0 TABLE ([Id] int, [_Position] [int]);
+      MERGE [Users] USING (
+      VALUES (@p0, @p1, 0),
+      (@p2, @p3, 1),
+      (@p4, @p5, 2),
+      (@p6, @p7, 3),
+      (@p8, @p9, 4),
+      (@p10, @p11, 5),
+      (@p12, @p13, 6),
+      (@p14, @p15, 7),
+      (@p16, @p17, 8)) AS i ([Password], [UserName], _Position) ON 1=0
+      WHEN NOT MATCHED THEN
+      INSERT ([Password], [UserName])
+      VALUES (i.[Password], i.[UserName])
+      OUTPUT INSERTED.[Id], i._Position
+      INTO @inserted0;
+      
+      SELECT [i].[Id] FROM @inserted0 i
+      ORDER BY [i].[_Position];
+info: 9/26/2022 15:42:29.965 RelationalEventId.CommandExecuted[20101] (Microsoft.EntityFrameworkCore.Database.Command) 
+      Executed DbCommand (765ms) [Parameters=[@p0='30', @p1='0', @p2='java' (Nullable = false) (Size = 4000), @p3='15', @p4='0', @p5='distributed systems' (Nullable = false) (Size = 4000), @p6='10', @p7='0', @p8='data mining' (Nullable = false) (Size = 4000), @p9='60', @p10='0', @p11='c++' (Nullable = false) (Size = 4000)], CommandType='Text', CommandTimeout='30']
+      SET NOCOUNT ON;
+      DECLARE @inserted0 TABLE ([Id] int, [_Position] [int]);
+      MERGE [Books] USING (
+      VALUES (@p0, @p1, @p2, 0),
+      (@p3, @p4, @p5, 1),
+      (@p6, @p7, @p8, 2),
+      (@p9, @p10, @p11, 3)) AS i ([Count], [Price], [Title], _Position) ON 1=0
+      WHEN NOT MATCHED THEN
+      INSERT ([Count], [Price], [Title])
+      VALUES (i.[Count], i.[Price], i.[Title])
+      OUTPUT INSERTED.[Id], i._Position
+      INTO @inserted0;
+      
+      SELECT [i].[Id] FROM @inserted0 i
+      ORDER BY [i].[_Position];
+info: 9/26/2022 15:43:11.839 RelationalEventId.CommandExecuted[20101] (Microsoft.EntityFrameworkCore.Database.Command) 
+      Executed DbCommand (47ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+      SELECT [u].[Id], [u].[Password], [u].[UserName]
+      FROM [Users] AS [u]
+info: 9/26/2022 15:43:18.857 RelationalEventId.CommandExecuted[20101] (Microsoft.EntityFrameworkCore.Database.Command) 
+      Executed DbCommand (2ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+      SELECT TOP(1) [b].[Id], [b].[Count], [b].[Price], [b].[Title]
+      FROM [Books] AS [b]
+      WHERE [b].[Title] = N'c++'

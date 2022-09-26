@@ -1,0 +1,17 @@
+C:\Users\VERS\source\repos\Library-Domain\Library-AccessData\bin\Debug\net6.0\Library-AccessData.deps.json
+C:\Users\VERS\source\repos\Library-Domain\Library-AccessData\bin\Debug\net6.0\Library-AccessData.runtimeconfig.json
+C:\Users\VERS\source\repos\Library-Domain\Library-AccessData\bin\Debug\net6.0\Library-AccessData.dll
+C:\Users\VERS\source\repos\Library-Domain\Library-AccessData\bin\Debug\net6.0\Library-AccessData.pdb
+C:\Users\VERS\source\repos\Library-Domain\Library-AccessData\bin\Debug\net6.0\Library-Domain.dll
+C:\Users\VERS\source\repos\Library-Domain\Library-AccessData\bin\Debug\net6.0\Library-Domain.pdb
+C:\Users\VERS\source\repos\Library-Domain\Library-AccessData\obj\Debug\net6.0\Library-AccessData.csproj.AssemblyReference.cache
+C:\Users\VERS\source\repos\Library-Domain\Library-AccessData\obj\Debug\net6.0\Library-AccessData.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\VERS\source\repos\Library-Domain\Library-AccessData\obj\Debug\net6.0\Library-AccessData.AssemblyInfoInputs.cache
+C:\Users\VERS\source\repos\Library-Domain\Library-AccessData\obj\Debug\net6.0\Library-AccessData.AssemblyInfo.cs
+C:\Users\VERS\source\repos\Library-Domain\Library-AccessData\obj\Debug\net6.0\Library-AccessData.csproj.CoreCompileInputs.cache
+C:\Users\VERS\source\repos\Library-Domain\Library-AccessData\obj\Debug\net6.0\Library-AccessData.csproj.CopyComplete
+C:\Users\VERS\source\repos\Library-Domain\Library-AccessData\obj\Debug\net6.0\Library-AccessData.dll
+C:\Users\VERS\source\repos\Library-Domain\Library-AccessData\obj\Debug\net6.0\refint\Library-AccessData.dll
+C:\Users\VERS\source\repos\Library-Domain\Library-AccessData\obj\Debug\net6.0\Library-AccessData.pdb
+C:\Users\VERS\source\repos\Library-Domain\Library-AccessData\obj\Debug\net6.0\Library-AccessData.genruntimeconfig.cache
+C:\Users\VERS\source\repos\Library-Domain\Library-AccessData\obj\Debug\net6.0\ref\Library-AccessData.dll
